@@ -63,14 +63,41 @@ The hero image should visually encode the **tension** or **transition** in the p
 | **Composition** | Asymmetric balance; visual weight on the "new way" side |
 | **Background** | Solid, gradient, or geometric — never busy |
 
+### Brand Colors (SenzoStack)
+
+Always use these brand colors as the primary palette. The colors flow as a **gradient from purple to blue**, matching the SenzoStack logo:
+
+```python
+# Primary brand colors
+PURPLE = "#7600C5"      # SenzoStack Purple - top/start of gradient
+BLUE = "#2950DC"        # SenzoStack Blue - bottom/end of gradient
+BLEND = "#5C40D0"       # Purple-blue blend - middle/transition
+
+# Supporting colors
+BG_DARK = "#0F172A"     # Deep slate - background
+OLD_COLOR = "#64748B"   # Muted gray - "old way" elements
+TEXT_COLOR = "#FFFFFF"  # White text on dark backgrounds
+```
+
+**Gradient direction**: Purple → Blend → Blue (top to bottom, or start to end)
+
+For three-part structures (like Services/Senzo/Stack):
+- **Services** (top): Purple (#7600C5)
+- **Senzo** (middle): Blended purple-blue (#5C40D0)
+- **Stack** (bottom): Blue (#2950DC)
+
+For two-color title treatments (e.g., "SenzoStack"):
+- "Senzo" in Purple (#7600C5)
+- "Stack" in Blue (#2950DC)
+
 ### Color Coding for Transitions
 
 | Transition Type | "Old Way" Colors | "New Way" Colors |
 |-----------------|------------------|------------------|
-| Tech/AI transformation | Gray, muted blue | Electric blue, cyan, violet |
-| Process improvement | Warm brown, amber | Cool teal, green |
-| Mindset shift | Heavy black, charcoal | Light gold, white |
-| Digital vs analog | Sepia, paper tones | Neon, digital blue |
+| Tech/AI transformation | Gray (#64748B) | Blue (#2950DC), Purple (#7600C5) |
+| Process improvement | Warm brown, amber | Purple (#7600C5), Blue (#2950DC) |
+| Mindset shift | Heavy black, charcoal | Blue (#2950DC), white |
+| Digital vs analog | Sepia, paper tones | Purple-blue gradient |
 
 ### Composition Patterns
 
@@ -116,10 +143,11 @@ import os
 # Dimensions
 W, H = 1600, 900  # or 1200, 628 for LinkedIn
 
-# Color palette (example: AI transformation)
-OLD_COLOR = "#3D4F5F"  # muted slate
-NEW_COLOR = "#00D4FF"  # electric cyan
-BG_COLOR = "#1A1A2E"   # deep navy
+# SenzoStack brand colors
+PRIMARY = "#2950DC"    # SenzoStack Blue
+SECONDARY = "#7600C5"  # SenzoStack Purple
+OLD_COLOR = "#64748B"  # muted gray (old way)
+BG_COLOR = "#0F172A"   # deep slate
 TEXT_COLOR = "#FFFFFF"
 
 img = Image.new("RGB", (W, H), color=BG_COLOR)
@@ -129,8 +157,13 @@ draw = ImageDraw.Draw(img)
 # Left side (old way) - muted rectangle
 draw.rectangle([0, 0, W//2 - 20, H], fill=OLD_COLOR)
 
-# Right side (new way) - vibrant rectangle  
-draw.rectangle([W//2 + 20, 0, W, H], fill=NEW_COLOR)
+# Right side (new way) - gradient from blue to purple
+for x in range(W//2 + 20, W):
+    ratio = (x - (W//2 + 20)) / (W - (W//2 + 20))
+    r = int(41 + (118 - 41) * ratio)
+    g = int(80 + (0 - 80) * ratio)
+    b = int(220 + (197 - 220) * ratio)
+    draw.line([(x, 0), (x, H)], fill=(r, g, b))
 
 # Center divider with gradient effect
 for i in range(40):
@@ -203,7 +236,7 @@ import numpy as np
 # Data
 categories = ['Core Developers', 'Peripheral Developers']
 values = [85.8, 77.8]
-colors = ['#00D4FF', '#3D4F5F']  # Match hero palette
+colors = ['#2950DC', '#7600C5']  # SenzoStack brand colors
 
 # Create figure
 fig, ax = plt.subplots(figsize=(10, 6))
@@ -359,6 +392,38 @@ Ask the user which platform they're targeting, or default to Substack dimensions
 - **Multiple comparisons**: Create one hero for the main thesis; offer additional data images for subsidiary comparisons
 - **User provides specific data**: Use their exact numbers; never fabricate statistics
 - **Color preference stated**: Override the default palette with user preferences
+
+---
+
+## Visual Metaphor Library
+
+Use these metaphors to translate abstract concepts into visuals:
+
+| Concept | Visual Metaphor |
+|---------|-----------------|
+| Rigid → Flexible | Grid of squares → Organic network |
+| Manual → Automated | Hand-drawn lines → Flowing curves |
+| Siloed → Connected | Isolated boxes → Interconnected nodes |
+| Old tech → New tech | Stacked rectangles → Radiating circles |
+| Chaos → Order | Scattered shapes → Aligned patterns |
+| Surface → Deep | Flat plane → Layered depth |
+| Individual → Team | Single dot → Constellation |
+| Process → Intelligence | Flowchart → Neural network |
+| Static → Dynamic | Solid shapes → Motion lines/gradients |
+| Complexity → Simplicity | Many small elements → Few bold elements |
+
+---
+
+## LinkedIn-Specific Guidance
+
+LinkedIn images need to work at smaller preview sizes and grab attention in a busy feed:
+
+1. **Dimensions**: 1200×628px (or 1200×1200 for square posts)
+2. **Text size**: Larger than Substack — minimum 48px for titles
+3. **Contrast**: Higher contrast required for mobile visibility
+4. **Simplicity**: Fewer elements; the concept must read in <2 seconds
+5. **Brand consistency**: Include your site URL or logo subtly
+6. **Pattern**: Grid-to-network or structured-to-organic works well for "transformation" themes
 
 ---
 
