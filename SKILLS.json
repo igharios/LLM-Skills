@@ -1,0 +1,25 @@
+{
+  "repository": "LLM-Skills",
+  "description": "A curated collection of custom Claude Code skills",
+  "last-updated": "2026-05-05",
+  "skills": [
+    {
+      "name": "writing-skill",
+      "path": "writing-skill",
+      "description": "B2B engineering content creation and repurposing across blogs, whitepapers, case studies, LinkedIn posts, and newsletters",
+      "formats": ["blog", "whitepaper", "case-study", "linkedin", "newsletter"],
+      "version": "1.0",
+      "status": "active",
+      "author": "ighar"
+    },
+    {
+      "name": "imagegen",
+      "path": "imagegen",
+      "description": "Generate publication-ready images for blog posts and LinkedIn content",
+      "formats": ["hero-image", "data-visualization"],
+      "version": "1.0",
+      "status": "active",
+      "author": "ighar"
+    }
+  ]
+}
