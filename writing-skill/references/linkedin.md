@@ -48,6 +48,62 @@
 
 ---
 
+## Hashtags
+
+**Strategy:** Use 3–5 hashtags placed at the end of the post (after a line break). Mix niche industry hashtags with broader professional ones to maximize reach within your target audience.
+
+**Hashtag Selection Process:**
+1. **Identify the core topic** — What is this post fundamentally about? (e.g., agile, coaching, velocity, observability, team dynamics)
+2. **Pick 1–2 niche hashtags** — Specific to engineering/delivery domain (where your audience congregates)
+3. **Pick 1–2 broader hashtags** — Professional/industry-wide (expands visibility)
+4. **Add 1 optional trending hashtag** — If relevant and authentic (not forced)
+
+**SenzoStack Core Hashtags** (use 2–3 per post):
+- `#EngineeringLeadership` — For posts about team dynamics, delivery, coaching
+- `#SoftwareDelivery` — For posts about processes, velocity, releases
+- `#Agile` — For process-focused content
+- `#TeamDynamics` — For posts about coaching, team structures, culture
+- `#ProductDelivery` — For posts about delivery outcomes, shipping
+- `#EngineeringCulture` — For posts about team practices, values
+
+**Broader Professional Hashtags** (use 1–2 per post):
+- `#Leadership` — Reaches executives and managers broadly
+- `#ProductManagement` — Reaches product folks and cross-functional leaders
+- `#TechLeadership` — Reaches CTO/engineering director level
+- `#CareerGrowth` — Reaches individual contributors thinking about progression
+
+**Niche Engineering Hashtags** (use if highly relevant):
+- `#DevOps` — If post touches deployment, CI/CD, infrastructure
+- `#SoftwareArchitecture` — If post touches system design, scaling
+- `#AIDelivery` — If post touches AI-accelerated processes or teams
+- `#ObservabilityEngineering` — If post touches monitoring, visibility
+
+**Placement:**
+```
+[Post body]
+
+#EngineeringLeadership #SoftwareDelivery #TeamDynamics
+```
+
+**Rules:**
+- Hashtags go after the post body, separated by a line break
+- No hashtags in the middle of paragraphs
+- Never use more than 5 hashtags (LinkedIn suppresses reach if over 5)
+- Don't use hashtags that don't directly apply to the content
+- Avoid trending hashtags unless they're genuinely relevant
+
+**Example Combinations:**
+
+Post about coaching frameworks → `#EngineeringLeadership #TeamDynamics #Leadership`
+
+Post about deployment velocity → `#SoftwareDelivery #DevOps #ProductDelivery`
+
+Post about team structure → `#EngineeringCulture #TeamDynamics #Leadership`
+
+Post about AI and delivery → `#AIDelivery #ProductDelivery #EngineeringLeadership`
+
+---
+
 ## Must Include
 - BLUF as the first sentence — always, no exceptions
 - One specific, grounded example (pattern, failure mode, or real scenario — anonymized if needed)
