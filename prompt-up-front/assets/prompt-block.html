@@ -1,0 +1,73 @@
+<!-- Insert directly under the page's main title. Replace PROMPT_TEXT with the HTML-escaped prompt. -->
+<aside class="gp-block" data-generating-prompt aria-labelledby="gp-label">
+  <style>
+    .gp-block {
+      --gp-accent: #b4541a;
+      --gp-bg: #fbf4ec;
+      --gp-border: #ecd9c6;
+      --gp-text: #2b2420;
+      --gp-muted: #7a685a;
+      margin: 16px 0 32px;
+      padding: 16px 20px 18px;
+      background: var(--gp-bg);
+      border: 1px solid var(--gp-border);
+      border-left: 4px solid var(--gp-accent);
+      border-radius: 6px;
+      color: var(--gp-text);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .gp-block {
+        --gp-accent: #e8935a;
+        --gp-bg: #2a221c;
+        --gp-border: #43362c;
+        --gp-text: #f1e7dd;
+        --gp-muted: #b3a295;
+      }
+    }
+    :root[data-theme="dark"] .gp-block {
+      --gp-accent: #e8935a;
+      --gp-bg: #2a221c;
+      --gp-border: #43362c;
+      --gp-text: #f1e7dd;
+      --gp-muted: #b3a295;
+    }
+    .gp-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .gp-label {
+      margin: 0;
+      font: 600 0.72rem/1.2 ui-sans-serif, system-ui, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gp-accent);
+    }
+    .gp-copy {
+      font: 500 0.72rem/1 ui-sans-serif, system-ui, sans-serif;
+      color: var(--gp-muted);
+      background: transparent;
+      border: 1px solid var(--gp-border);
+      border-radius: 4px;
+      padding: 5px 9px;
+      cursor: pointer;
+    }
+    .gp-copy:hover { color: var(--gp-text); border-color: var(--gp-accent); }
+    .gp-text {
+      margin: 0;
+      font: 400 0.95rem/1.6 ui-serif, Georgia, "Times New Roman", serif;
+      font-style: italic;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    @media print { .gp-copy { display: none; } }
+  </style>
+  <div class="gp-head">
+    <p class="gp-label" id="gp-label">Prompt that generated this artifact</p>
+    <button class="gp-copy" type="button"
+      onclick="var b=this;navigator.clipboard.writeText(b.closest('.gp-block').querySelector('.gp-text').textContent.trim()).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1500)})">Copy</button>
+  </div>
+  <p class="gp-text">PROMPT_TEXT</p>
+</aside>

@@ -1,7 +1,7 @@
 {
   "repository": "LLM-Skills",
   "description": "A curated collection of custom Claude Code skills",
-  "last-updated": "2026-05-05",
+  "last-updated": "2026-10-06",
   "skills": [
     {
       "name": "writing-skill",
@@ -19,6 +19,15 @@
       "formats": ["hero-image", "data-visualization"],
       "version": "1.0",
       "status": "active",
+      "author": "ighar"
+    },
+    {
+      "name": "prompt-up-front",
+      "path": "prompt-up-front",
+      "description": "Distill a conversation into the single prompt that would have produced the final artifact, and place it at the top of the artifact so readers see the intent first",
+      "formats": ["html-artifact", "claude-doc", "markdown"],
+      "version": "1.0",
+      "status": "experimental",
       "author": "ighar"
     }
   ]
