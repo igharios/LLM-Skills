@@ -10,6 +10,7 @@ A curated collection of custom Claude Code skills designed to accelerate enginee
 |-------|---------|--------|---------|
 | [**writing-skill**](#writing-skill) | B2B engineering content creation & repurposing (blogs, whitepapers, case studies, LinkedIn, newsletters) | Active | 1.0 |
 | [**imagegen**](#imagegen) | Publication-ready image generation (hero images, data visualizations) | Active | — |
+| [**prompt-up-front**](#prompt-up-front) | Distills a conversation into the one prompt that would have produced the artifact, and puts it at the top of the artifact | Experimental | 1.0 |
 
 ---
 
@@ -39,6 +40,23 @@ A curated collection of custom Claude Code skills designed to accelerate enginee
 - **Data Visualizations:** Clean charts and graphs illustrating statistics and research findings
 
 **Quick Start:** [See imagegen/](imagegen/)
+
+---
+
+## Prompt Up Front
+
+**Show readers the intent before the content (BLUF applied to artifacts).**
+
+- **Distill:** Turns the whole conversation into the single prompt that would have produced the final artifact in one shot
+- **Insert:** Places it under the artifact's title in a distinct block labelled "Prompt that generated this artifact"
+- **Update:** Replaces the block when the artifact changes, so there is only ever one
+- **On demand:** Runs when asked, e.g. "put the prompt on top" or "how could I have done this in one prompt?"
+
+**Key Files:**
+- `SKILL.md` — Skill definition, distillation rules, and per-format insertion steps
+- `assets/prompt-block.html` — Self-contained styled block for HTML artifacts (light and dark themes, copy button)
+
+**Quick Start:** [See prompt-up-front/](prompt-up-front/)
 
 ---
 
@@ -131,4 +149,4 @@ See [LICENSE](LICENSE) for details.
 
 ---
 
-**Last Updated:** 2026-05-05
+**Last Updated:** 2026-10-06
